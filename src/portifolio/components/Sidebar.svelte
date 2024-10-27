@@ -76,8 +76,8 @@
     }
     
     .sidebar svg {
-    width: 40px;
-    height: 40px;
-    fill: white;
-  }
+        width: 40px;
+        height: 40px;
+        fill: white;
+    }
   </style>
