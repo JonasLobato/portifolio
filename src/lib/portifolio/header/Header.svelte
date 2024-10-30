@@ -1,0 +1,6 @@
+<header>
+    <div></div>
+    <div>
+        <img src="" alt="">
+    </div>
+</header>
