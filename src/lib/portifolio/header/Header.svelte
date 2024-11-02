@@ -9,7 +9,7 @@
 
 			<div class="profile-information">
 				<h1>Jonas Lobato</h1>
-				<h2>Desenvolvedor senior em Svelte 10.</h2>
+				<h2>Desenvolvedor font-end.</h2>
 			</div>
 		</div>
 	</div>

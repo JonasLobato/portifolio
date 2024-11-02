@@ -4,4 +4,4 @@
 </script>
 
 <Header/>
-<!-- <AboutMe/> -->
+<AboutMe/>
