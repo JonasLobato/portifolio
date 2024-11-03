@@ -28,7 +28,7 @@
 		background-image: url('https://wallpaper4k.top/wp-content/uploads/2024/01/Imagem-de-fundo-4K-para-codificadores-1024x576.jpg');
 		background-size: cover;
 		background-position: center;
-		border-radius: 10px;
+		border-radius: 10px 0px 50px 100px;
 	}
 
 	.profile-wrapped {
