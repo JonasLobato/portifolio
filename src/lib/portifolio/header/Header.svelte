@@ -1,15 +1,17 @@
 <header>
 	<div class="container container-position">
-		<div class="profile-banner"></div>
+		<div class="islands">
+			<div class="profile-banner"></div>
 
-		<div class="profile-wrapped">
-			<div class="profile-avatar">
-				<img src="/images/portifolio/header/profile.jpg" alt="Jonas Desenvolvedor" />
-			</div>
+			<div class="profile-wrapped">
+				<div class="profile-avatar">
+					<img src="/images/portifolio/header/profile.jpg" alt="Jonas Desenvolvedor" />
+				</div>
 
-			<div class="profile-information">
-				<h1>Jonas Lobato</h1>
-				<h2>Desenvolvedor font-end.</h2>
+				<div class="profile-information">
+					<h1>Jonas Lobato</h1>
+					<h2>Desenvolvedor font-end.</h2>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -18,9 +20,16 @@
 <style>
 	header {
 		padding-top: 2rem;
-	}
-	.container-position {
-		position: relative;
+		& .container-position {
+			& .islands {
+				border: 1px solid red;
+				position: relative;
+				height: 40rem;
+				background-color: silver;
+				margin-bottom: 1rem;
+				border-radius: 10px;
+			}
+		}
 	}
 	.profile-banner {
 		width: 100%;
@@ -28,13 +37,12 @@
 		background-image: url('https://wallpaper4k.top/wp-content/uploads/2024/01/Imagem-de-fundo-4K-para-codificadores-1024x576.jpg');
 		background-size: cover;
 		background-position: center;
-		border-radius: 10px 0px 50px 100px;
+		border-radius: 10px 10px 0px 0px;
 	}
 
 	.profile-wrapped {
 		gap: 2.5rem;
 		align-items: end;
-		/* left: 25px; */
 	}
 
 	.profile-information {
@@ -51,11 +59,11 @@
 		}
 	}
 	@media (min-width: 300px) {
-		.container-position {
+		.islands {
 			display: flex;
 			flex-direction: column;
 			align-items: center;
-			justify-content: center;
+			/* justify-content: center; */
 		}
 
 		.profile-wrapped {
@@ -100,10 +108,10 @@
 			display: flex;
 			flex-direction: row;
 			align-items: end;
-            & .profile-avatar {
-                width: 200px;
+			& .profile-avatar {
+				width: 200px;
 				height: 200px;
-                margin-left: 25px;
+				margin-left: 25px;
 			}
 		}
 		.profile-information {
