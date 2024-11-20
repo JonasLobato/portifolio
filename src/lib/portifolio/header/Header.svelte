@@ -22,22 +22,22 @@
 		padding-top: 2rem;
 		& .container-position {
 			& .islands {
-				border: 1px solid red;
 				position: relative;
 				height: 40rem;
 				background-color: silver;
 				margin-bottom: 1rem;
 				border-radius: 10px;
+				box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+				& .profile-banner {
+					width: 100%;
+					height: 250px;
+					background-image: url('https://wallpaper4k.top/wp-content/uploads/2024/01/Imagem-de-fundo-4K-para-codificadores-1024x576.jpg');
+					background-size: cover;
+					background-position: center;
+					border-radius: 10px 10px 0px 0px;
+				}
 			}
 		}
-	}
-	.profile-banner {
-		width: 100%;
-		height: 250px;
-		background-image: url('https://wallpaper4k.top/wp-content/uploads/2024/01/Imagem-de-fundo-4K-para-codificadores-1024x576.jpg');
-		background-size: cover;
-		background-position: center;
-		border-radius: 10px 10px 0px 0px;
 	}
 
 	.profile-wrapped {
