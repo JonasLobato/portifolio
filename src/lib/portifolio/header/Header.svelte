@@ -63,7 +63,6 @@
 			display: flex;
 			flex-direction: column;
 			align-items: center;
-			/* justify-content: center; */
 		}
 
 		.profile-wrapped {
@@ -116,7 +115,7 @@
 		}
 		.profile-information {
 			text-align: left;
-			margin-bottom: -25px;
+			margin-bottom: -30px;
 			& h1 {
 				font-size: 3.4rem;
 			}
@@ -125,4 +124,24 @@
 			}
 		}
 	}
+	@media (min-width: 1024px) {
+	.profile-wrapped {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		gap: 2rem;
+		position: absolute;
+		bottom: -70px;
+		left: 10px;
+	}
+	.profile-information {
+		text-align: left;
+		h1 {
+			font-size: 4rem;
+		}
+		h2 {
+			font-size: 1.5rem;
+		}
+	}
+}
 </style>
