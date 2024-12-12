@@ -135,9 +135,11 @@
 		left: 10px;
 	}
 	.profile-information {
+		/* box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px; */
 		text-align: left;
 		h1 {
 			font-size: 4rem;
+			font: bold;
 		}
 		h2 {
 			font-size: 1.5rem;

@@ -22,7 +22,7 @@
 
 <style>  
 	.section-about-me {
-		border: 1px red solid;
+		/* border: 1px red solid; */
 		line-height: 1.6;
 	}
 	.islands {
