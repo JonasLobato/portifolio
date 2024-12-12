@@ -1,17 +1,14 @@
 <header>
-	<div class="container container-position">
-		<div class="islands">
-			<div class="profile-banner"></div>
+	<div class="container-position container">
+		<div class="profile-banner"></div>
+		<div class="profile-wrapped">
+			<div class="profile-avatar">
+				<img src="/images/portifolio/header/profile.jpg" alt="Jonas Desenvolvedor" />
+			</div>
 
-			<div class="profile-wrapped">
-				<div class="profile-avatar">
-					<img src="/images/portifolio/header/profile.jpg" alt="Jonas Desenvolvedor" />
-				</div>
-
-				<div class="profile-information">
-					<h1>Jonas Lobato</h1>
-					<h2>Desenvolvedor font-end.</h2>
-				</div>
+			<div class="profile-information">
+				<h1>Jonas Lobato</h1>
+				<h2>Desenvolvedor font-end.</h2>
 			</div>
 		</div>
 	</div>
@@ -21,21 +18,13 @@
 	header {
 		padding-top: 2rem;
 		& .container-position {
-			& .islands {
-				position: relative;
-				height: 40rem;
-				background-color: silver;
-				margin-bottom: 1rem;
-				border-radius: 10px;
-				box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-				& .profile-banner {
-					width: 100%;
-					height: 250px;
-					background-image: url('https://wallpaper4k.top/wp-content/uploads/2024/01/Imagem-de-fundo-4K-para-codificadores-1024x576.jpg');
-					background-size: cover;
-					background-position: center;
-					border-radius: 10px 10px 0px 0px;
-				}
+			& .profile-banner {
+				width: 100%;
+				height: 250px;
+				background-image: url('https://wallpaper4k.top/wp-content/uploads/2024/01/Imagem-de-fundo-4K-para-codificadores-1024x576.jpg');
+				background-size: cover;
+				background-position: center;
+				border-radius: 10px 10px 0px 0px;
 			}
 		}
 	}
@@ -52,19 +41,21 @@
 
 		& h1 {
 			font-size: 4rem;
+			font-weight: bold;
 		}
 		& h2 {
 			font-size: 1.5rem;
 			font-weight: 100;
+			color: #555;
 		}
 	}
 	@media (min-width: 300px) {
-		.islands {
+		.container-position {
 			display: flex;
 			flex-direction: column;
 			align-items: center;
+			justify-content: center;
 		}
-
 		.profile-wrapped {
 			display: inline-flex;
 			flex-direction: column;
@@ -75,7 +66,7 @@
 			& .profile-avatar {
 				width: 250px;
 				height: 250px;
-				border: solid 10px #fff;
+				border: solid 10px #f8f9fc;
 				border-radius: 50%;
 				overflow: hidden;
 				& img {
@@ -125,25 +116,36 @@
 		}
 	}
 	@media (min-width: 1024px) {
-	.profile-wrapped {
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		gap: 2rem;
-		position: absolute;
-		bottom: -70px;
-		left: 10px;
-	}
-	.profile-information {
-		/* box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px; */
-		text-align: left;
-		h1 {
-			font-size: 4rem;
-			font: bold;
+		.container-position {
+			border: 1px solid red;
 		}
-		h2 {
-			font-size: 1.5rem;
+		.profile-wrapped {
+			display: flex;
+			flex-direction: row;
+			position: relative;
+			top: -125px;
+			gap: 2rem;
+			& .profile-avatar {
+				width: 250px;
+				height: 250px;
+				border: solid 10px #f8f9fc;
+				border-radius: 50%;
+				overflow: hidden;
+				& img {
+					width: 100%;
+					height: auto;
+				}
+			}
+		}
+		.profile-information {
+			text-align: left;
+			h1 {
+				font-size: 4rem;
+				font: bold;
+			}
+			h2 {
+				font-size: 1.5rem;
+			}
 		}
 	}
-}
 </style>
