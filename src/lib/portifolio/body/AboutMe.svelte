@@ -1,12 +1,52 @@
 <script>
-	let infoPortifolio = [
+	const infoPortifolio = [
 		{
-			image: "logo1.png", alt: "imagem logo",
-			h3: "Cinema",
-			a: "nome do link projeto",
-			href: "link "
+			image: 'logo1.png',
+			alt: 'imagem logo',
+			h3: 'Cinema',
+			href: 'google.com',
+			textContent: 'nome do link projeto'
+		},
+		{
+			image: 'logo2.png',
+			alt: 'imagem logo',
+			h3: 'Cinema',
+			href: 'google.com',
+			textContent: 'nome do link projeto'
+		},
+		{
+			image: 'logo3.png',
+			alt: 'imagem logo',
+			h3: 'Cinema',
+			href: 'google.com',
+			textContent: 'nome do link projeto'
 		}
-	]
+	];
+
+	const AZZZ = document.getElementById('portfolioFlex');
+
+	// infoPortifolio.forEach((infoPortifolio) => {
+	// 	const portfolioItem = document.createElement('div');
+	// 	portfolioItem.className = 'portfolio-item';
+
+	// 	const img = document.createElement('img');
+	// 	img.src = infoPortifolio.image;
+	// 	img.alt = infoPortifolio.alt;
+
+	// 	const h3 = document.createElement('h3');
+	// 	h3.textContent = infoPortifolio.h3;
+
+	// 	const link = document.createElement('a');
+	// 	link.href = infoPortifolio.href;
+	// 	link.target = '_blank';
+	// 	link.textContent = infoPortifolio.textContent;
+
+	// 	portfolioItem.appendChild(img);
+	// 	portfolioItem.appendChild(h3);
+	// 	portfolioItem.appendChild(link);
+
+	// 	AZZZ.appendChild(portfolioItem);
+	// });
 </script>
 
 <section class="portfolio container">
@@ -15,7 +55,7 @@
 		<p>Trabalhos selecionados que realizei no passado.</p>
 	</div>
 
-	<div class="portfolio-flex">
+	<div id="portfolioFlex" class="portfolio-flex">
 		<div class="portfolio-item">
 			<img src="logo1.png" alt="hellotax logo" />
 			<h3>hellotax</h3>
@@ -28,29 +68,6 @@
 			<a href="google" target="_blank">conectar.com</a>
 		</div>
 
-		<div class="portfolio-item">
-			<img src="logo3.png" alt="John Deere logo" />
-			<h3>John Deere</h3>
-			<a href="https://atu300.deere.com" target="_blank">atu300.deere.com</a>
-		</div>
-
-		<div class="portfolio-item">
-			<img src="logo4.png" alt="olaqlu logo" />
-			<h3>Personal Website</h3>
-			<a href="https://olaolu.dev" target="_blank">olaolu.dev</a>
-		</div>
-
-		<div class="portfolio-item">
-			<img src="logo5.png" alt="Pixel2HTML logo" />
-			<h3>Pixel2HTML</h3>
-			<a href="https://pixel2html.netlify.app" target="_blank">pixel2html.netlify.app</a>
-		</div>
-
-		<div class="portfolio-item">
-			<img src="logo6.png" alt="dropd logo" />
-			<h3>dropd</h3>
-			<a href="https://npm.im/react-dropd" target="_blank">npm.im/react-dropd</a>
-		</div>
 	</div>
 </section>
 
@@ -105,15 +122,14 @@
 	.portfolio-flex {
 		border: 1px solid red;
 		display: flex;
-		flex-wrap: wrap; /* Permite quebrar linha */
+		flex-wrap: wrap;
 		gap: 20px;
 		margin-top: 30px;
-		justify-content: center; /* Centraliza os itens */
+		justify-content: center;
 	}
 
-	/* Cartões */
 	.portfolio-item {
-		max-width: 250px; /* Tamanho máximo dos cartões */
+		max-width: 250px;
 		background-color: #fff;
 		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 		padding: 20px;

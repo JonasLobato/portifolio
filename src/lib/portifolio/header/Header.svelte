@@ -116,9 +116,6 @@
 		}
 	}
 	@media (min-width: 1024px) {
-		.container-position {
-			border: 1px solid red;
-		}
 		.profile-wrapped {
 			display: flex;
 			flex-direction: row;
