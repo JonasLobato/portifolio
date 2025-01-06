@@ -67,7 +67,7 @@
 		margin: 10px 0;
 	}
 
-	@media (min-width: 300px) {
+	@media (max-width: 300px) {
 		.section-about-me {
 			display: flex;
 			flex-direction: column;
@@ -75,6 +75,6 @@
 			justify-content: center;
 		}
 	}
-	@media (min-width: 768px) {
-	}
+	@media (min-width: 768px) {}
+	@media (min-width: 1024px) {}
 </style>

@@ -33,12 +33,10 @@
 		gap: 2.5rem;
 		align-items: end;
 	}
-
 	.profile-information {
 		display: flex;
 		flex-direction: column;
 		gap: 0.5rem;
-
 		& h1 {
 			font-size: 4rem;
 			font-weight: bold;
@@ -75,7 +73,6 @@
 				}
 			}
 		}
-
 		.profile-information {
 			text-align: center;
 			display: flex;
@@ -145,4 +142,4 @@
 			}
 		}
 	}
-</style>
+	</style>
