@@ -1,0 +1,76 @@
+html {
+    scroll-behavior: smooth;
+}
+body{
+    background-color: gray;
+    margin: 0;
+}
+
+h1{
+    text-align: center;
+}
+
+.poltrona{
+    position: relative;
+    border: 1px solid red;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.assentos {
+    border: 1px solid red;
+    position: absolute;
+    z-index: 0;
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.assento {
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+}
+
+.disponivel {
+    background-color: green;
+}
+
+.indisponivel {
+    background-color: red;
+}
+
+/* abaInfo */
+.abaInfo{
+    position: absolute;
+    z-index: 1;
+
+    background-color: white;
+    width: 150px;
+    height: 200px;
+
+    text-align: center;
+}
+
+
+.abadisponivel{
+    color: green;
+}
+.abaindisponivel{
+    color: red;
+}
+
+.btComprar{
+    height: 20px;
+    width: 100px;
+}
+.btFechar{
+    height: 20px;
+    width: 100px;
+}
