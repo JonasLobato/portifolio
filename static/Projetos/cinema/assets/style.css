@@ -12,7 +12,6 @@ h1{
 
 .poltrona{
     position: relative;
-    border: 1px solid red;
 
     display: flex;
     flex-wrap: wrap;
@@ -20,7 +19,6 @@ h1{
 }
 
 .assentos {
-    border: 1px solid red;
     position: absolute;
     z-index: 0;
     

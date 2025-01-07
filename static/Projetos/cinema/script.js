@@ -1,6 +1,5 @@
 import { infoPoltronas } from "./dados.js"
 const section = document.getElementById("assentos")
-// let abaInfo = document.getElementById("abaInfo")
     
 infoPoltronas.forEach(infoPoltrona => {
     let unidade = document.createElement("button")
@@ -32,6 +31,18 @@ infoPoltronas.forEach(infoPoltrona => {
         btComprar.innerText = `Comprar`
         abaInfo.appendChild(btComprar)
             
+        btComprar.addEventListener("click", () => {
+            if (infoPoltrona.descricao === "disponivel") {
+                infoPoltrona.descricao = "indisponivel"; // Atualiza o status
+                unidade.classList.remove("disponivel");
+                unidade.classList.add("indisponivel"); // Atualiza a classe do botão
+                dis.innerText = "indisponivel"; // Atualiza o texto no dialog
+                abaInfo.close(); // Fecha o dialog
+            } else {
+                alert("Poltrona já comprada!");
+            }
+        });
+
         let btFechar = document.createElement("button")
         btFechar.setAttribute("class","btFechar")
         btFechar.innerText = `Fechar`

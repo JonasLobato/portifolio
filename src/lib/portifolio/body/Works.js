@@ -2,10 +2,10 @@ const infoPortifolio = [
     {
         image: {dir:"images/portifolio/works/", nome: "image" ,alt: "imagem logo",},
         copywrite: {
-            title: "Cinema",
+            title: "CinemaHub",
             link: {
                 href: 'projetos/cinema/index.html',
-                text: 'Projeto Cinema'
+                text: 'Projeto CinemaHub'
             }
         }
     },
