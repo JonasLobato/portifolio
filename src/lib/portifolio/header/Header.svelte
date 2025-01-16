@@ -21,7 +21,7 @@
 			& .profile-banner {
 				width: 100%;
 				height: 250px;
-				background-image: url('https://wallpaper4k.top/wp-content/uploads/2024/01/Imagem-de-fundo-4K-para-codificadores-1024x576.jpg');
+				background-image: url("/images/portifolio/header/background.jpg");
 				background-size: cover;
 				background-position: center;
 				border-radius: 10px 10px 0px 0px;
