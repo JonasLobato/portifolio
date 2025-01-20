@@ -11,7 +11,7 @@
     
 </script>
 <footer>
-    <button on:click={negativo}>
+    <button onclick={negativo}>
                 <Test Class={ligado ? 'ligado' : 'desligado'}/>
         </button>
 
