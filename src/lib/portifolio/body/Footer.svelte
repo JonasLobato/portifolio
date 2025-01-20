@@ -3,32 +3,27 @@
 	import IconLinkedin from "$lib/icons/IconLinkedin.svelte";
 	import Test from "$lib/icons/Test.svelte";
 
-    let isOn = true;
+    let ligado = true;
 
-    function toggle() {
-    isOn = !isOn;
+    function negativo() {
+    ligado = !ligado;
     };
     
 </script>
 <footer>
+    <button on:click={negativo}>
+                <Test Class={ligado ? 'ligado' : 'desligado'}/>
+        </button>
+
     <div class="container">
         <div class="svg">
             <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/jonas-lobato/">
-                <IconLinkedin/>
+                <IconLinkedin color="#e0460d"/>
             </a>
         </div>
-        
-        <button class="toggle-button {isOn ? 'on' : 'off'}"
-            on:click={toggle}
-            >
-             {isOn ? 'Ligado' : 'Desligado'}
-        </button>
-
         <div class="svg">
-            
             <a target="_blank" rel="noopener noreferrer" href="https://github.com/JonasLobato">
                  <IconGithub color="#e0460d"/>
-                 <Test Class={isOn}/>
             </a>
         </div>
     </div>

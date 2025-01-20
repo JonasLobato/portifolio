@@ -1,5 +1,5 @@
 <script>
-    let {Class= ".desligado"} = $props()
+    let {Class="desligado"} = $props()
 </script>
 <div class="quadrado {Class}">
 4
