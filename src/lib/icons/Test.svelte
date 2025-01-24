@@ -1,4 +1,11 @@
 <script>
+	let ligado = true;
+
+	function negativo() {
+	ligado = !ligado;
+	};
+
+
 	let { Class = 'desligado' } = $props();
 </script>
 
