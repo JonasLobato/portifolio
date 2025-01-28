@@ -8,21 +8,27 @@
 <footer>
 	<div class="container">
 		<h3 class="text-init-footer">Manda um Oi!</h3>
-		<div class="svg">
-			<a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/jonas-lobato/">
-				linkedin.com/in/jonas-lobato<IconLinkedin color="#e0460d" />
-			</a>
-		</div>
-		<div class="svg">
-			<a target="_blank" rel="noopener noreferrer" href="https://github.com/JonasLobato">
-				github.com/JonasLobato<IconGithub color="#e0460d" />
-			</a>
+		<div class="pri-column">
+			<div class="svg">
+				<a
+					target="_blank"
+					rel="noopener noreferrer"
+					href="https://www.linkedin.com/in/jonas-lobato/"
+				>
+					linkedin.com/in/jonas-lobato<IconLinkedin color="#e0460d" />
+				</a>
+			</div>
+			<div class="svg">
+				<a target="_blank" rel="noopener noreferrer" href="https://github.com/JonasLobato">
+					github.com/JonasLobato<IconGithub color="#e0460d" />
+				</a>
+			</div>
 		</div>
 
 		<div class="divider"></div>
 
 		<div class="copyright">
-			<span>© Jonas Lobato {currentYear}</span>
+			<span>&copy Jonas Lobato {currentYear}</span>
 		</div>
 	</div>
 </footer>
@@ -33,30 +39,46 @@
 		width: 100%;
 		height: 500px;
 		background-color: #555;
-        .text-init-footer{
-            color: #fff;
-        }
-        a {
-		    color: #fff;
-		    text-decoration: none;
-		    transition: color 0.2s;
-            border: solid 1px red;
-	    }
 
-	    a:hover {
-		    color: #e0460d;
-	    }
+		padding: 2rem;
+
+		.container {
+			border: white solid 1px;
+		}
+		.text-init-footer {
+			color: #f8f9fc;
+		}
+		.pri-column{
+			/* border: 1px solid purple; */
+			width: 270px;
+			height: auto;
+			display: flex;
+			flex-direction: column;
+			gap: 10px;
+		}
+		.svg a {
+			display: flex;
+			align-items: center;
+			gap: 8px;
+			color: #f8f9fc;
+			text-decoration: none;
+			transition: color 0.2s;
+		}
+
+		a:hover {
+			color: #e0460d;
+		}
 		.divider {
 			grid-column: span 2;
 			border-top: 1px solid #e0460d;
 			margin: 1rem 0;
 		}
-        .copyright {
-            color: #fff;
-		    grid-column: span 2;
-		    display: flex;
-		    justify-content: space-between;
-		    align-items: center;
-	    }
+		.copyright {
+			color: #fff;
+			grid-column: span 2;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
 	}
 </style>
