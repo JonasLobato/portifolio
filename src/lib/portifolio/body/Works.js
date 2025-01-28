@@ -1,6 +1,6 @@
 const infoPortifolio = [
     {
-        image: {dir:"images/portifolio/works/", nome: "image" ,alt: "imagem logo",},
+        image: {dir:"images/portifolio/works/", nome: "img-cinema" ,alt: "imagem logo",},
         copywrite: {
             title: "CinemaHub",
             link: {
@@ -10,7 +10,7 @@ const infoPortifolio = [
         }
     },
     {
-        image: {dir:"images/portifolio/works/", nome: "image" ,alt: "imagem logo",},
+        image: {dir:"images/portifolio/works/", nome: "img-cinema" ,alt: "imagem logo",},
         copywrite: {
             title: "2Cinema",
             link: {
@@ -20,17 +20,17 @@ const infoPortifolio = [
         }
     },
     {
-        image: {dir:"images/portifolio/works/", nome: "image" ,alt: "imagem logo",},
+        image: {dir:"images/portifolio/works/", nome: "img-construindo-um-cartão-de-produto" ,alt: "imagem logo",},
         copywrite: {
-            title: "3Cinema",
+            title: "Card de Produto",
             link: {
-                href: 'google.com',
-                text: 'nome do link projeto'
+                href: 'projetos/construindo-um-cartão-de-produto/index.html',
+                text: 'construindo-um-cartão-de-produto'
             }
         }
     },
     {
-        image: {dir:"images/portifolio/works/", nome: "image" ,alt: "imagem logo",},
+        image: {dir:"images/portifolio/works/", nome: "img-cinema" ,alt: "imagem logo",},
         copywrite: {
             title: "4Cinema",
             link: {
@@ -40,7 +40,7 @@ const infoPortifolio = [
         }
     },
     {
-        image: {dir:"images/portifolio/works/", nome: "image" ,alt: "imagem logo",},
+        image: {dir:"images/portifolio/works/", nome: "img-cinema" ,alt: "imagem logo",},
         copywrite: {
             title: "5Cinema",
             link: {
@@ -50,7 +50,7 @@ const infoPortifolio = [
         }
     },
     {
-        image: {dir:"images/portifolio/works/", nome: "image" ,alt: "imagem logo",},
+        image: {dir:"images/portifolio/works/", nome: "img-cinema" ,alt: "imagem logo",},
         copywrite: {
             title: "6Cinema",
             link: {
