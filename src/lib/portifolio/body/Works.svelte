@@ -8,7 +8,7 @@
 		<p>Trabalhos selecionados que realizei no passado.</p>
 	</div>
 
-	<div id="portfolioFlex" class="portfolio-flex">
+	<div class="portfolio-flex">
 		{#each infoPortifolio as { image, dir, nome, alt, copywrite }}
 			<div class="portfolio-item">
 				<img src="{image.dir + image.nome}.png" {alt} />
@@ -21,9 +21,9 @@
 
 <style>
 	.portfolio {
-		text-align: center;
 		display: flex;
 		flex-direction: column;
+		text-align: center;
 		gap: 20px;
 	}
 	
@@ -40,10 +40,7 @@
 	}
 	
 	.portfolio-flex {
-		display: flex;
-		flex-wrap: wrap;
 		gap: 20px;
-		justify-content: space-between;
 	}
 	
 	.portfolio-item {
@@ -100,17 +97,16 @@
 	}
 	@media (min-width: 768px) {
 		.portfolio-flex {
-			display: flex;
-			flex-direction: row;
-			align-items: center;
-			justify-content: space-between;
+			display: grid;
+			grid: auto-flow / 1fr 1fr 1fr;
+			justify-items: center;
 		}
 	}
 	@media (min-width: 1024px) {
 		.portfolio-flex {
 			display: grid;
 			grid: auto-flow / 1fr 1fr 1fr;
+			justify-items: center;
 		}
 	}
-
 	</style>
