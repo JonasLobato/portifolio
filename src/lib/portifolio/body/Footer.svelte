@@ -15,12 +15,12 @@
 					rel="noopener noreferrer"
 					href="https://www.linkedin.com/in/jonas-lobato/"
 				>
-					linkedin.com/in/jonas-lobato<IconLinkedin color="#e0460d" />
+					linkedin.com/in/jonas-lobato<IconLinkedin/>
 				</a>
 			</div>
 			<div class="svg">
 				<a target="_blank" rel="noopener noreferrer" href="https://github.com/JonasLobato">
-					github.com/JonasLobato<IconGithub color="#e0460d" />
+					github.com/JonasLobato<IconGithub/>
 				</a>
 			</div>
 		</div>
@@ -39,12 +39,7 @@
 		width: 100%;
 		height: 500px;
 		background-color: #555;
-
 		padding: 2rem;
-
-		.container {
-			border: white solid 1px;
-		}
 		.text-init-footer {
 			color: #f8f9fc;
 		}
@@ -81,4 +76,12 @@
 			align-items: center;
 		}
 	}
+	@media (min-width: 300px){
+		footer {
+			font-size: .9rem;
+			padding: 15px;
+		}
+	}
+	@media (min-width: 768px){}
+	@media (min-width: 1024px){}
 </style>
