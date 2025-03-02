@@ -15,6 +15,9 @@ html, body{
     font-family: 'Roboto', sans-serif;
     background-color: #f8f9fc;
     color: #333;
+
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
 }
 
 .container {

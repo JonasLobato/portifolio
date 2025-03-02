@@ -8,6 +8,7 @@
 <footer>
 	<div class="container">
 		<h3 class="text-init-footer">Manda um Oi!</h3>
+		<br />
 		<div class="pri-column">
 			<div class="svg">
 				<a
@@ -15,12 +16,12 @@
 					rel="noopener noreferrer"
 					href="https://www.linkedin.com/in/jonas-lobato/"
 				>
-					linkedin.com/in/jonas-lobato<IconLinkedin/>
+					<IconLinkedin icon="25px" />linkedin.com/in/jonas-lobato
 				</a>
 			</div>
 			<div class="svg">
 				<a target="_blank" rel="noopener noreferrer" href="https://github.com/JonasLobato">
-					github.com/JonasLobato<IconGithub/>
+					<IconGithub icon="25px" />github.com/JonasLobato
 				</a>
 			</div>
 		</div>
@@ -37,13 +38,13 @@
 	footer {
 		margin-top: 40px;
 		width: 100%;
-		height: 500px;
-		background-color: #555;
+		height: 300px;
 		padding: 2rem;
+		background-color: #555;
 		.text-init-footer {
 			color: #f8f9fc;
 		}
-		.pri-column{
+		.pri-column {
 			/* border: 1px solid purple; */
 			width: 270px;
 			height: auto;
@@ -76,12 +77,14 @@
 			align-items: center;
 		}
 	}
-	@media (min-width: 300px){
+	@media (min-width: 300px) {
 		footer {
-			font-size: .9rem;
+			font-size: 0.9rem;
 			padding: 15px;
 		}
 	}
-	@media (min-width: 768px){}
-	@media (min-width: 1024px){}
+	@media (min-width: 768px) {
+	}
+	@media (min-width: 1024px) {
+	}
 </style>
