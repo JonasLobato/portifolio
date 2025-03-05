@@ -8,14 +8,14 @@
 		<p>Trabalhos selecionados que realizei no passado.</p>
 	</div>
 
-	{#each infoPortifolio as { image, dir, nome, alt, copywrite }}
-		<button href={copywrite.link.href} target="_blank" class="portfolio-flex">
-			<div class="portfolio-item">
+	<div class="portfolio-flex">
+		{#each infoPortifolio as { image, dir, nome, alt, copywrite }}
+			<button href={copywrite.link.href} target="_blank" class="portfolio-item">
 				<img src="{image.dir + image.nome}.png" {alt} />
 				<h3>{copywrite.title}</h3>
-			</div>
-		</button>
-	{/each}
+			</button>
+		{/each}
+	</div>
 	<!-- <div class="portfolio-flex">
 		{#each infoPortifolio as { image, dir, nome, alt, copywrite }}
 			<div class="portfolio-item">
@@ -28,76 +28,77 @@
 </section>
 
 <style>
-	.portfolio {
-		display: flex;
-		flex-direction: column;
-		text-align: center;
-		gap: 20px;
-		border: purple 1px solid;
-	}
+	@media (min-width: 300px) {
+		.portfolio {
+			display: flex;
+			flex-direction: column;
+			text-align: center;
+			gap: 20px;
+			border: purple 1px solid;
+		}
 
-	.portfolio-header h1 {
-		font-size: 2.5rem;
-		font-weight: bold;
-		color: #444;
-		margin-bottom: 10px;
-	}
+		.portfolio-header h1 {
+			font-size: 2.5rem;
+			font-weight: bold;
+			color: #444;
+			margin-bottom: 10px;
+		}
 
-	.portfolio-header p {
-		font-size: 1rem;
-		color: #555;
-	}
+		.portfolio-header p {
+			font-size: 1rem;
+			color: #555;
+		}
 
-	.portfolio-flex {
-		border: #222 1px solid;
-		gap: 20px;
-	}
+		.portfolio-flex {
+			border: #222 1px solid;
+			gap: 20px;
+		}
 
-	.portfolio-item {
-		max-width: 350px;
-		height: auto;
-		background-color: #fff;
-		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-		padding: 20px;
-		border-radius: 10px;
-		overflow: hidden;
-		transition:
-			transform 0.2s ease,
-			box-shadow 0.2s ease;
-		/* Define um tamanho flexível */
-		flex: 1 1 calc(30% - 20px);
-		border: red 1px solid;
-	}
+		.portfolio-item {
+			max-width: 350px;
+			height: auto;
+			background-color: #fff;
+			box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+			padding: 20px;
+			border-radius: 10px;
+			overflow: hidden;
+			transition:
+				transform 0.2s ease,
+				box-shadow 0.2s ease;
+			/* Define um tamanho flexível */
+			flex: 1 1 calc(30% - 20px);
+			border: red 1px solid;
+		}
 
-	.portfolio-item:hover {
-		transform: translateY(-10px);
-		box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-	}
+		.portfolio-item:hover {
+			transform: translateY(-10px);
+			box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+		}
 
-	.portfolio-item img {
-		width: 100%;
-		height: auto;
-		margin-bottom: 15px;
-	}
+		.portfolio-item img {
+			width: 100%;
+			height: auto;
+			margin-bottom: 15px;
+		}
 
-	.portfolio-item img {
-		object-fit: cover;
-		transition: transform 0.8s;
-		height: 100%;
-	}
+		.portfolio-item img {
+			object-fit: cover;
+			transition: transform 0.8s;
+			height: 100%;
+		}
 
-	.portfolio-item:hover img {
-		transform: scale(1.5);
-	}
+		.portfolio-item:hover img {
+			transform: scale(1.5);
+		}
 
-	.portfolio-item h3 {
-		font-size: 1.2rem;
-		font-weight: bold;
-		color: #222;
-		margin-bottom: 5px;
-	}
+		.portfolio-item h3 {
+			font-size: 1.2rem;
+			font-weight: bold;
+			color: #222;
+			margin-bottom: 5px;
+		}
 
-	/* .portfolio-item a {
+		/* .portfolio-item a {
 		color: #6b17e6;
 		text-decoration: none;
 		font-size: 0.9rem;
@@ -107,29 +108,28 @@
 		text-decoration: underline;
 	} */
 
-	@media (min-width: 300px) {
 		.portfolio-flex {
 			display: flex;
 			flex-direction: column;
 			align-items: center;
 			justify-content: center;
 		}
-		/* .portfolio-item a {
-			font-size: 0.9rem;
-		} */
 	}
 	@media (min-width: 768px) {
-		/* .portfolio-flex {
+		.portfolio-flex {
 			display: grid;
 			grid: auto-flow / 1fr 1fr 1fr;
 			justify-items: center;
-		} */
+		}
+		.portfolio-item h3{
+			font-size: 0.9rem;
+		}
 	}
 	@media (min-width: 1024px) {
-		/* .portfolio-flex {
+		.portfolio-flex {
 			display: grid;
 			grid: auto-flow / 1fr 1fr 1fr;
 			justify-items: center;
-		} */
+		}
 	}
 </style>
