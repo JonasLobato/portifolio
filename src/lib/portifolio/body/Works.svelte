@@ -55,11 +55,15 @@
 		}
 
 		.portfolio-item {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			gap: 25px;
 			max-width: 350px;
 			height: auto;
 			background-color: #fff;
 			box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-			padding: 20px;
+			padding: 10px;
 			border-radius: 10px;
 			overflow: hidden;
 			transition:
@@ -97,16 +101,6 @@
 			color: #222;
 			margin-bottom: 5px;
 		}
-
-		/* .portfolio-item a {
-		color: #6b17e6;
-		text-decoration: none;
-		font-size: 0.9rem;
-	}
-
-	.portfolio-item a:hover {
-		text-decoration: underline;
-	} */
 
 		.portfolio-flex {
 			display: flex;

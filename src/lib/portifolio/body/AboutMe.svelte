@@ -24,50 +24,50 @@
 </div>
 
 <style>
-	.section-about-me {
-		line-height: 1.6;
-	}
-	.islands {
-		/* width: 100%; */
-		height: 400px;
-		padding: 20px;
-		background-color: silver;
-		margin-bottom: 1rem;
-		border-radius: 10px;
-		box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-	}
-
-	.islands span {
-		display: inline-block;
-		font-size: 24px;
-		font-weight: bold;
-		background: rgba(255, 255, 255, 0.2);
-		padding: 5px 15px;
-		border-radius: 8px;
-		margin-bottom: 15px;
-	}
-
-	.trajectory {
-		font-size: 16px;
-		color: black;
-		margin: 20px 0 0;
-		text-align: left;
-	}
-
-	.trajectory a {
-		color: black;
-		text-decoration: underline;
-	}
-
-	.trajectory a:hover {
-		color: #ffd740;
-	}
-
-	.trajectory br {
-		margin: 10px 0;
-	}
-
 	@media (max-width: 300px) {
+		.section-about-me {
+			line-height: 1.6;
+		}
+		.islands {
+			/* width: 100%; */
+			height: 400px;
+			padding: 20px;
+			background-color: silver;
+			margin-bottom: 1rem;
+			border-radius: 10px;
+			box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+		}
+
+		.islands span {
+			display: inline-block;
+			font-size: 24px;
+			font-weight: bold;
+			background: rgba(255, 255, 255, 0.2);
+			padding: 5px 15px;
+			border-radius: 8px;
+			margin-bottom: 15px;
+		}
+
+		.trajectory {
+			font-size: 16px;
+			color: black;
+			margin: 20px 0 0;
+			text-align: left;
+		}
+
+		.trajectory a {
+			color: black;
+			text-decoration: underline;
+		}
+
+		.trajectory a:hover {
+			color: #ffd740;
+		}
+
+		.trajectory br {
+			margin: 10px 0;
+		}
+
 		.section-about-me {
 			display: flex;
 			flex-direction: column;
@@ -75,6 +75,8 @@
 			justify-content: center;
 		}
 	}
-	@media (min-width: 768px) {}
-	@media (min-width: 1024px) {}
+	@media (min-width: 768px) {
+	}
+	@media (min-width: 1024px) {
+	}
 </style>

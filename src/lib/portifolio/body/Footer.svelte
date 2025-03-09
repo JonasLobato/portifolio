@@ -1,6 +1,7 @@
 <script>
 	import IconGithub from '$lib/icons/IconGithub.svelte';
 	import IconLinkedin from '$lib/icons/IconLinkedin.svelte';
+	import IconWhatsapp from '$lib/icons/iconWhatsapp.svelte';
 
 	const currentYear = new Date().getFullYear();
 </script>
@@ -11,10 +12,15 @@
 		<br />
 		<div class="pri-column">
 			<div class="svg">
-				<a
-					target="_blank"
-					rel="noopener noreferrer"
-					href="https://www.linkedin.com/in/jonas-lobato/"
+				<a target="_blank" rel="noopener noreferrer" 
+				href="https://wa.me/+5594988026840?text=Ol%C3%A1+Jonas,+tudo+bem?+Tenho+interesse+em+conversar+com+vo%C3%A7%C3%AA%F0%9F%98%8F%F0%9F%A7%91%E2%80%8D%F0%9F%92%BB"
+				>
+					<IconWhatsapp icon="25px" /> Meu Whatsapp!
+				</a>
+			</div>
+			<div class="svg">
+				<a target="_blank" rel="noopener noreferrer" 
+				href="https://www.linkedin.com/in/jonas-lobato/"
 				>
 					<IconLinkedin icon="25px" />linkedin.com/in/jonas-lobato
 				</a>
