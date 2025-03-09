@@ -6,6 +6,6 @@
 </script>
 
 <Header/>
+<AboutMe/>
 <Works/>
-<!-- <AboutMe/> -->
 <Footer/>
