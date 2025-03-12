@@ -34,7 +34,6 @@
 			flex-direction: column;
 			text-align: center;
 			gap: 20px;
-			border: purple 1px solid;
 		}
 
 		.portfolio-header h1 {
@@ -50,7 +49,6 @@
 		}
 
 		.portfolio-flex {
-			border: #222 1px solid;
 			gap: 20px;
 		}
 
@@ -71,7 +69,6 @@
 				box-shadow 0.2s ease;
 			/* Define um tamanho flexível */
 			flex: 1 1 calc(30% - 20px);
-			border: red 1px solid;
 		}
 
 		.portfolio-item:hover {
