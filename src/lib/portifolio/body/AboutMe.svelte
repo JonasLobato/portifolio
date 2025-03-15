@@ -1,4 +1,95 @@
-<div class="section-about-me container">
+<script>
+	import { onMount } from "svelte";
+	let activeIndex = 0;
+	const slides = [
+	  { title: "#1", subtitle: "Create Quality", highlight: "Content", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+	  { title: "#2", subtitle: "Use Relevant", highlight: "Keywords", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+	  { title: "#3", subtitle: "Promote Your", highlight: "Post", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+	  { title: "#4", subtitle: "Always", highlight: "Monitoring", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+	];
+  
+	function nextSlide() {
+	  activeIndex = (activeIndex + 1) % slides.length;
+	}
+  
+	function prevSlide() {
+	  activeIndex = (activeIndex - 1 + slides.length) % slides.length;
+	}
+  
+	onMount(() => {
+	  const interval = setInterval(nextSlide, 5000);
+	  return () => clearInterval(interval);
+	});
+  </script>
+  
+  <style>
+	.carousel {
+	  display: flex;
+	  overflow: hidden;
+	  position: relative;
+	  width: 100%;
+	  max-width: 900px;
+	  margin: auto;
+	}
+	.slides {
+	  display: flex;
+	  transition: transform 0.5s ease-in-out;
+	}
+	.slide {
+	  min-width: 100%;
+	  padding: 20px;
+	  background: white;
+	  color: black;
+	  border-radius: 10px;
+	  text-align: center;
+	}
+	.slide h1 {
+	  font-size: 2rem;
+	}
+	.slide h2 {
+	  font-size: 1.5rem;
+	  font-weight: bold;
+	  color: orange;
+	}
+	.controls {
+	  display: flex;
+	  justify-content: space-between;
+	  position: absolute;
+	  top: 50%;
+	  width: 100%;
+	  transform: translateY(-50%);
+	}
+	.button {
+	  background: orange;
+	  color: white;
+	  border: none;
+	  padding: 10px;
+	  cursor: pointer;
+	  border-radius: 5px;
+	}
+  </style>
+  
+  <div class="carousel">
+	<div class="slides" style="transform: translateX(-{activeIndex * 100}%);">
+	  {#each slides as slide}
+		<div class="slide">
+		  <h1>{slide.title}</h1>
+		  <h2>{slide.subtitle} <span style="color: black;">{slide.highlight}</span></h2>
+		  <p>{slide.text}</p>
+		</div>
+	  {/each}
+	</div>
+	<div class="controls">
+	  <button class="button" on:click={prevSlide}>&#9665;</button>
+	  <button class="button" on:click={nextSlide}>&#9655;</button>
+	</div>
+  </div>
+  
+
+
+
+
+<!-- <div class="section-about-me container">
 	<div class="islands">
 		<div>
 			<span>Sobre</span>
@@ -79,4 +170,4 @@
 	}
 	@media (min-width: 1024px) {
 	}
-</style>
+</style> -->
