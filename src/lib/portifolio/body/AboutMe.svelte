@@ -1,19 +1,31 @@
 <script>
-	import { onMount } from "svelte";
-	let activeIndex = 0;
+	import { onMount } from 'svelte';
+	let currentIndex = 0;
 	const slides = [
-	  { title: "#1", subtitle: "Create Quality", highlight: "Content", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
-	  { title: "#2", subtitle: "Use Relevant", highlight: "Keywords", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
-	  { title: "#3", subtitle: "Promote Your", highlight: "Post", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
-	  { title: "#4", subtitle: "Always", highlight: "Monitoring", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+	  {
+		title: "Minha Jornada no Desenvolvimento",
+		content: "Comecei minha trajetória no desenvolvimento com um grande interesse por tecnologia e programação. Desde os primeiros projetos, fui aprimorando minhas habilidades e explorando novas soluções."
+	  },
+	  {
+		title: "Experiência com Regras de Negócio",
+		content: "Atuando como Agente de Sistemas na Stone, adquiri profundo conhecimento sobre regras de negócio em diferentes segmentos, auxiliando na implementação e suporte de sistemas complexos."
+	  },
+	  {
+		title: "Trabalhando com Sistemas ERP",
+		content: "Tenho experiência em integração e suporte de sistemas ERP, garantindo que os clientes utilizem a tecnologia de forma eficiente para otimizar seus processos."
+	  },
+	  {
+		title: "Especialização em Front-End",
+		content: "Minha paixão pelo desenvolvimento Front-End me levou a dominar tecnologias como **Svelte**, **JavaScript** e práticas modernas para criar interfaces responsivas e dinâmicas."
+	  }
 	];
-  
+	
 	function nextSlide() {
-	  activeIndex = (activeIndex + 1) % slides.length;
+	  currentIndex = (currentIndex + 1) % slides.length;
 	}
   
 	function prevSlide() {
-	  activeIndex = (activeIndex - 1 + slides.length) % slides.length;
+	  currentIndex = (currentIndex - 1 + slides.length) % slides.length;
 	}
   
 	onMount(() => {
@@ -28,35 +40,23 @@
 	  overflow: hidden;
 	  position: relative;
 	  width: 100%;
-	  max-width: 900px;
+	  max-width: 800px;
 	  margin: auto;
-	}
-	.slides {
-	  display: flex;
-	  transition: transform 0.5s ease-in-out;
+	  background: white;
+	  padding: 20px;
+	  border-radius: 10px;
+	  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 	}
 	.slide {
-	  min-width: 100%;
-	  padding: 20px;
-	  background: white;
-	  color: black;
-	  border-radius: 10px;
-	  text-align: center;
-	}
-	.slide h1 {
-	  font-size: 2rem;
-	}
-	.slide h2 {
-	  font-size: 1.5rem;
-	  font-weight: bold;
-	  color: orange;
+	  flex: 0 0 100%;
+	  transition: transform 0.5s ease-in-out;
 	}
 	.controls {
-	  display: flex;
-	  justify-content: space-between;
 	  position: absolute;
 	  top: 50%;
 	  width: 100%;
+	  display: flex;
+	  justify-content: space-between;
 	  transform: translateY(-50%);
 	}
 	.button {
@@ -70,18 +70,15 @@
   </style>
   
   <div class="carousel">
-	<div class="slides" style="transform: translateX(-{activeIndex * 100}%);">
-	  {#each slides as slide}
-		<div class="slide">
-		  <h1>{slide.title}</h1>
-		  <h2>{slide.subtitle} <span style="color: black;">{slide.highlight}</span></h2>
-		  <p>{slide.text}</p>
-		</div>
-	  {/each}
-	</div>
+	{#each slides as slide, i}
+	  <div class="slide" style="transform: translateX({-100 * currentIndex}%);">
+		<h2>{slide.title}</h2>
+		<p>{@html slide.content}</p>
+	  </div>
+	{/each}
 	<div class="controls">
-	  <button class="button" on:click={prevSlide}>&#9665;</button>
-	  <button class="button" on:click={nextSlide}>&#9655;</button>
+	  <button class="button" on:click={prevSlide}>❮</button>
+	  <button class="button" on:click={nextSlide}>❯</button>
 	</div>
   </div>
   
