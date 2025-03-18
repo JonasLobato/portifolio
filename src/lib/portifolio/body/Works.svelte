@@ -10,21 +10,12 @@
 
 	<div class="portfolio-flex">
 		{#each infoPortifolio as { image, dir, nome, alt, copywrite }}
-			<button href={copywrite.link.href} target="_blank" class="portfolio-item">
-				<img src="{image.dir + image.nome}.png" {alt} />
-				<h3>{copywrite.title}</h3>
-			</button>
-		{/each}
-	</div>
-	<!-- <div class="portfolio-flex">
-		{#each infoPortifolio as { image, dir, nome, alt, copywrite }}
 			<div class="portfolio-item">
 				<img src="{image.dir + image.nome}.png" {alt} />
-				<h3>{copywrite.title}</h3>
-				<a href={copywrite.link.href} target="_blank"> {copywrite.link.text}</a>
+				<a href={copywrite.link.href} target="_blank">{copywrite.title}</a>
 			</div>
 		{/each}
-	</div> -->
+	</div>
 </section>
 
 <style>
@@ -92,11 +83,16 @@
 			transform: scale(1.5);
 		}
 
-		.portfolio-item h3 {
+		.portfolio-item a {
 			font-size: 1.2rem;
 			font-weight: bold;
 			color: #222;
 			margin-bottom: 5px;
+			font-size: 0.9rem;
+		}
+
+		.portfolio-item a:hover{
+			color: #e0460d;
 		}
 
 		.portfolio-flex {
@@ -112,7 +108,7 @@
 			grid: auto-flow / 1fr 1fr 1fr;
 			justify-items: center;
 		}
-		.portfolio-item h3{
+		.portfolio-item a{
 			font-size: 0.9rem;
 		}
 	}
@@ -121,6 +117,9 @@
 			display: grid;
 			grid: auto-flow / 1fr 1fr 1fr;
 			justify-items: center;
+		}
+		.portfolio-item a{
+			font-size: 1rem;
 		}
 	}
 </style>
