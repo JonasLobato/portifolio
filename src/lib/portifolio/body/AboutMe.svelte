@@ -16,10 +16,10 @@
 	  },
 	  {
 		title: "Especialização em Front-End",
-		content: "Minha paixão pelo desenvolvimento Front-End me levou a dominar tecnologias como **Svelte**, **JavaScript** e práticas modernas para criar interfaces responsivas e dinâmicas."
+		content: "Minha paixão pelo desenvolvimento Front-End me levou a dominar tecnologias como <strong>Svelte</strong>, <strong>JavaScript</strong> e práticas modernas para criar interfaces responsivas e dinâmicas."
 	  }
 	];
-	
+  
 	function nextSlide() {
 	  currentIndex = (currentIndex + 1) % slides.length;
 	}
@@ -34,31 +34,50 @@
 	});
   </script>
   
+  <div class="carousel">
+	{#each slides as slide, i}
+	  <div class="slide" style="transform: translateX({-100 * currentIndex}%);">
+		<h2>{slide.title}</h2>
+		<p>{slide.content}</p>
+	  </div>
+	{/each}
+	<div class="controls">
+	  <button class="button" onclick={prevSlide}>❮</button>
+	  <button class="button" onclick={nextSlide}>❯</button>
+	</div>
+  </div>
+  
   <style>
 	.carousel {
 	  display: flex;
 	  overflow: hidden;
 	  position: relative;
-	  width: 100%;
+	  width: 90%;
 	  max-width: 800px;
-	  margin: auto;
+	  margin: 20px auto;
 	  background: white;
 	  padding: 20px;
 	  border-radius: 10px;
 	  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 	}
+  
 	.slide {
 	  flex: 0 0 100%;
 	  transition: transform 0.5s ease-in-out;
+	  padding: 10px;
+	  text-align: center;
 	}
+  
 	.controls {
 	  position: absolute;
 	  top: 50%;
-	  width: 100%;
+	  width: 90%;
 	  display: flex;
 	  justify-content: space-between;
 	  transform: translateY(-50%);
+	  border: 1px blue solid;
 	}
+  
 	.button {
 	  background: orange;
 	  color: white;
@@ -66,21 +85,44 @@
 	  padding: 10px;
 	  cursor: pointer;
 	  border-radius: 5px;
+	  transition: background 0.3s;
+	}
+  
+	.button:hover {
+	  background: darkorange;
+	}
+  
+	@media (max-width: 300px) {
+	  .carousel {
+		padding: 10px;
+		font-size: 0.8em;
+	  }
+  
+	  .button {
+		padding: 5px;
+	  }
+	}
+  
+	@media (min-width: 768px) {
+	  .carousel {
+		max-width: 600px;
+	  }
+  
+	  .button {
+		padding: 8px;
+	  }
+	}
+  
+	@media (min-width: 1024px) {
+	  .carousel {
+		max-width: 800px;
+	  }
+  
+	  .slide {
+		padding: 20px;
+	  }
 	}
   </style>
-  
-  <div class="carousel">
-	{#each slides as slide, i}
-	  <div class="slide" style="transform: translateX({-100 * currentIndex}%);">
-		<h2>{slide.title}</h2>
-		<p>{@html slide.content}</p>
-	  </div>
-	{/each}
-	<div class="controls">
-	  <button class="button" on:click={prevSlide}>❮</button>
-	  <button class="button" on:click={nextSlide}>❯</button>
-	</div>
-  </div>
   
 
 
@@ -112,6 +154,18 @@
 </div>
 
 <style>
+h2{
+		width: 20ch;
+		font-family: monospace;
+		text-wrap: nowrap;
+		overflow: hidden;
+		animation: typing 2s steps(20) infinite alternate-reverse;
+	}
+	@keyframes typing {
+		from{
+			width: 0ch;
+		}
+	}
 	@media (max-width: 300px) {
 		.section-about-me {
 			line-height: 1.6;
@@ -163,8 +217,7 @@
 			justify-content: center;
 		}
 	}
-	@media (min-width: 768px) {
-	}
-	@media (min-width: 1024px) {
-	}
+	@media (max-width: 300px) {}
+	@media (min-width: 768px) {}
+	@media (min-width: 1024px) {}
 </style> -->
