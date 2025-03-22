@@ -50,32 +50,35 @@
   <style>
 	.carousel {
 	  display: flex;
+	  justify-content: space-between;
 	  overflow: hidden;
 	  position: relative;
-	  width: 90%;
+	  /* width: 90%; */
 	  max-width: 800px;
 	  margin: 20px auto;
 	  background: white;
-	  padding: 20px;
+	  /* padding: 20px; */
 	  border-radius: 10px;
 	  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+	  border: 1px solid red;
 	}
-  
+	
 	.slide {
-	  flex: 0 0 100%;
-	  transition: transform 0.5s ease-in-out;
-	  padding: 10px;
-	  text-align: center;
+		flex: 0 0 100%;
+		transition: transform 0.5s ease-in-out;
+		padding: 10px;
+		text-align: center;
+		border: 1px solid black;
 	}
-  
+	
 	.controls {
+		border: 1px blue solid;
 	  position: absolute;
 	  top: 50%;
-	  width: 90%;
+	  width: 100%;
 	  display: flex;
 	  justify-content: space-between;
 	  transform: translateY(-50%);
-	  border: 1px blue solid;
 	}
   
 	.button {
