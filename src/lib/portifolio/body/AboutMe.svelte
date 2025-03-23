@@ -1,5 +1,4 @@
 <script>
-	import { onMount } from 'svelte';
 	let currentIndex = 0;
 	const slides = [
 	  {
@@ -27,11 +26,11 @@
 	function prevSlide() {
 	  currentIndex = (currentIndex - 1 + slides.length) % slides.length;
 	}
-  
-	onMount(() => {
-	  const interval = setInterval(nextSlide, 5000);
-	  return () => clearInterval(interval);
-	});
+  setTimeout(nextSlide, 5000)
+	for (var i = 0; i < slides.length; i++) {
+		nextSlide(slides, i, 2000)
+	}
+	
   </script>
   
   <div class="carousel">
@@ -53,22 +52,30 @@
 	  justify-content: space-between;
 	  overflow: hidden;
 	  position: relative;
-	  /* width: 90%; */
+	  width: 90%;
 	  max-width: 800px;
+	  height: 350px;
 	  margin: 20px auto;
 	  background: white;
-	  /* padding: 20px; */
 	  border-radius: 10px;
-	  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+	  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 	  border: 1px solid red;
 	}
 	
 	.slide {
+		padding: 200px;
 		flex: 0 0 100%;
 		transition: transform 0.5s ease-in-out;
-		padding: 10px;
+		padding: 50px;
 		text-align: center;
 		border: 1px solid black;
+			h2{
+				font-size: 20px;
+				font: bold;
+			}
+			p{
+				font-size: medium;
+			}
 	}
 	
 	.controls {
