@@ -12,22 +12,26 @@
 		<br />
 		<div class="pri-column">
 			<div class="svg">
-				<a target="_blank" rel="noopener noreferrer" 
-				href="https://wa.me/+5594988026840?text=Ol%C3%A1+Jonas,+tudo+bem?+Tenho+interesse+em+conversar+com+vo%C3%A7%C3%AA%F0%9F%98%8F%F0%9F%A7%91%E2%80%8D%F0%9F%92%BB"
+				<a
+					target="_blank"
+					rel="noopener noreferrer"
+					href="https://wa.me/+5594988026840?text=Ol%C3%A1+Jonas,+tudo+bem?+Tenho+interesse+em+conversar+com+vo%C3%A7%C3%AA%F0%9F%98%8F%F0%9F%A7%91%E2%80%8D%F0%9F%92%BB"
 				>
 					<IconWhatsapp icon="25px" /> Meu Whatsapp!
 				</a>
 			</div>
 			<div class="svg">
-				<a target="_blank" rel="noopener noreferrer" 
-				href="https://www.linkedin.com/in/jonas-lobato/"
+				<a
+					target="_blank"
+					rel="noopener noreferrer"
+					href="https://www.linkedin.com/in/jonas-lobato/"
 				>
 					<IconLinkedin icon="25px" />linkedin.com/in/jonas-lobato
 				</a>
 			</div>
 			<div class="svg">
 				<a target="_blank" rel="noopener noreferrer" href="https://github.com/JonasLobato">
-					<IconGithub icon="25px" />github.com/JonasLobato
+					<IconGithub icon="25px" customStyle="svg-hover" />github.com/JonasLobato
 				</a>
 			</div>
 		</div>
@@ -51,25 +55,26 @@
 			color: #f8f9fc;
 		}
 		.pri-column {
-			/* border: 1px solid purple; */
 			width: 270px;
 			height: auto;
 			display: flex;
 			flex-direction: column;
 			gap: 10px;
 		}
-		.svg a {
-			display: flex;
-			align-items: center;
-			gap: 8px;
-			color: #f8f9fc;
-			text-decoration: none;
-			transition: color 0.2s;
+		.svg {
+			a {
+				display: flex;
+				align-items: center;
+				gap: 8px;
+				color: #f8f9fc;
+				text-decoration: none;
+				transition: color 0.2s;
+			}
+			a:hover {
+				color: #e0460d;
+			}
 		}
 
-		a:hover {
-			color: #e0460d;
-		}
 		.divider {
 			grid-column: span 2;
 			border-top: 1px solid #e0460d;
@@ -88,9 +93,5 @@
 			font-size: 0.9rem;
 			padding: 15px;
 		}
-	}
-	@media (min-width: 768px) {
-	}
-	@media (min-width: 1024px) {
 	}
 </style>
