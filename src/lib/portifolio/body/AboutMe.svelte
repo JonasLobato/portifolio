@@ -39,7 +39,7 @@
 	{#each slides as slide, i}
 		<div class="slide" style="transform: translateX({-100 * currentIndex}%);">
 			<h2>{slide.title}</h2>
-			<p>{slide.content}</p>
+			<p>{@html slide.content}</p>
 		</div>
 	{/each}
 	<div class="controls">
@@ -101,9 +101,8 @@
 		}
 	}
 
-	@media (max-width: 300px) {
+	@media (min-width: 300px) {
 		.carousel {
-			padding: 10px;
 			font-size: 0.8em;
 		}
 
